@@ -1,0 +1,2 @@
+the python file name should start with "test".
+Automatic test discovery is a feature of pytest where it automatically finds and executes test files and test functions based on naming conventions like test_*.py and test_ functions, without explicitly specifying them.
