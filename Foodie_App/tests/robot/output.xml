@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-16T22:24:11.264786" rpa="false" schemaversion="5">
+<suite id="s1" name="Restaurant Tests" source="C:\Users\adity\Desktop\12-01-2025\Foodie_app\tests\robot\restaurant_tests.robot">
+<kw name="Create API Session" owner="keywords" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-02-16T22:24:11.594878" level="INFO">Creating Session using : alias=foodie, url=http://127.0.0.1:5000, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${SESSION}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-02-16T22:24:11.594504" elapsed="0.000730"/>
+</kw>
+<status status="PASS" start="2026-02-16T22:24:11.593636" elapsed="0.001789"/>
+</kw>
+<test id="s1-t1" name="Create Restaurant Positive" line="7">
+<kw name="Create Restaurant" owner="keywords">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T22:24:11.607274" level="INFO">POST Request : url=http://127.0.0.1:5000/api/v1/restaurants 
+ path_url=/api/v1/restaurants 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '94', 'Content-Type': 'application/json'} 
+ body=b'{"name": "RobotResto", "category": "Indian", "location": "Hyderabad", "contact": "9999999999"}' 
+ </msg>
+<msg time="2026-02-16T22:24:11.607463" level="INFO">POST Response : url=http://127.0.0.1:5000/api/v1/restaurants 
+ status=201, reason=CREATED 
+ headers={'Server': 'Werkzeug/3.0.1 Python/3.14.2', 'Date': 'Mon, 16 Feb 2026 16:54:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '158', 'Connection': 'close'} 
+ body={
+  "approved": false,
+  "category": "Indian",
+  "contact": "9999999999",
+  "disabled": false,
+  "id": 3,
+  "location": "Hyderabad",
+  "name": "RobotResto"
+}
+ 
+ </msg>
+<msg time="2026-02-16T22:24:11.607676" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${SESSION}</arg>
+<arg>/api/v1/restaurants</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-02-16T22:24:11.597586" elapsed="0.010145"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-02-16T22:24:11.607879" elapsed="0.000090"/>
+</return>
+<msg time="2026-02-16T22:24:11.608224" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${RESTAURANT_DATA}</arg>
+<status status="PASS" start="2026-02-16T22:24:11.596762" elapsed="0.011511"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2026-02-16T22:24:11.609134" elapsed="0.000759"/>
+</kw>
+<status status="PASS" start="2026-02-16T22:24:11.595544" elapsed="0.015083"/>
+</test>
+<test id="s1-t2" name="Create Restaurant Negative" line="11">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-16T22:24:11.613563" level="INFO">${invalid} = {'category': 'Indian'}</msg>
+<var>${invalid}</var>
+<arg>category=Indian</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-16T22:24:11.612780" elapsed="0.000840"/>
+</kw>
+<kw name="Create Restaurant" owner="keywords">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-02-16T22:24:11.621298" level="INFO">POST Request : url=http://127.0.0.1:5000/api/v1/restaurants 
+ path_url=/api/v1/restaurants 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '22', 'Content-Type': 'application/json'} 
+ body=b'{"category": "Indian"}' 
+ </msg>
+<msg time="2026-02-16T22:24:11.621430" level="INFO">POST Response : url=http://127.0.0.1:5000/api/v1/restaurants 
+ status=201, reason=CREATED 
+ headers={'Server': 'Werkzeug/3.0.1 Python/3.14.2', 'Date': 'Mon, 16 Feb 2026 16:54:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '80', 'Connection': 'close'} 
+ body={
+  "approved": false,
+  "category": "Indian",
+  "disabled": false,
+  "id": 4
+}
+ 
+ </msg>
+<msg time="2026-02-16T22:24:11.621653" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${SESSION}</arg>
+<arg>/api/v1/restaurants</arg>
+<arg>json=${payload}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-02-16T22:24:11.615067" elapsed="0.006651"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-02-16T22:24:11.621906" elapsed="0.000191"/>
+</return>
+<msg time="2026-02-16T22:24:11.622533" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>${invalid}</arg>
+<status status="PASS" start="2026-02-16T22:24:11.614542" elapsed="0.008062"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2026-02-16T22:24:11.624005" level="FAIL">Url: http://127.0.0.1:5000/api/v1/restaurants Expected status: 201 != 400</msg>
+<arg>400</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="FAIL" start="2026-02-16T22:24:11.623361" elapsed="0.032993">Url: http://127.0.0.1:5000/api/v1/restaurants Expected status: 201 != 400</status>
+</kw>
+<status status="FAIL" start="2026-02-16T22:24:11.611786" elapsed="0.045249">Url: http://127.0.0.1:5000/api/v1/restaurants Expected status: 201 != 400</status>
+</test>
+<status status="FAIL" start="2026-02-16T22:24:11.268962" elapsed="0.390001"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Restaurant Tests" id="s1" pass="1" fail="1" skip="0">Restaurant Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

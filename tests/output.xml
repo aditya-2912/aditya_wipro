@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-02-03T10:17:35.405189" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment1302" source="C:\Users\adity\Desktop\12-01-2025\tests\assignment1302.robot">
+<test id="s1-t1" name="Login Test 1" line="16">
+<kw name="Validate Login">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2026-02-03T10:17:35.489644" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${TRUE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.489377" elapsed="0.000376"/>
+</kw>
+<arg>'${username}' == 'admin' and '${password}' == 'admin123'</arg>
+<arg>Return From Keyword</arg>
+<arg>${TRUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.488599" elapsed="0.001262"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<arg>${FALSE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="NOT RUN" start="2026-02-03T10:17:35.490008" elapsed="0.000025"/>
+</kw>
+<msg time="2026-02-03T10:17:35.490209" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>admin</arg>
+<arg>admin123</arg>
+<status status="PASS" start="2026-02-03T10:17:35.487773" elapsed="0.002471"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>${TRUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.490766" elapsed="0.000544"/>
+</kw>
+<status status="PASS" start="2026-02-03T10:17:35.486712" elapsed="0.005053"/>
+</test>
+<test id="s1-t2" name="Login Test 2" line="20">
+<kw name="Validate Login">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${username}' == 'admin' and '${password}' == 'admin123'</arg>
+<arg>Return From Keyword</arg>
+<arg>${TRUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.493923" elapsed="0.000538"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2026-02-03T10:17:35.494848" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${FALSE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.494614" elapsed="0.000333"/>
+</kw>
+<msg time="2026-02-03T10:17:35.495125" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>admin</arg>
+<arg>wrongpass</arg>
+<status status="PASS" start="2026-02-03T10:17:35.493464" elapsed="0.001692"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>${FALSE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.495567" elapsed="0.000535"/>
+</kw>
+<status status="PASS" start="2026-02-03T10:17:35.492715" elapsed="0.003878"/>
+</test>
+<test id="s1-t3" name="Login Test 3" line="24">
+<kw name="Validate Login">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${username}' == 'admin' and '${password}' == 'admin123'</arg>
+<arg>Return From Keyword</arg>
+<arg>${TRUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.500720" elapsed="0.002576"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2026-02-03T10:17:35.503960" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${FALSE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.503524" elapsed="0.000586"/>
+</kw>
+<msg time="2026-02-03T10:17:35.504426" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>user</arg>
+<arg>admin123</arg>
+<status status="PASS" start="2026-02-03T10:17:35.499810" elapsed="0.004670"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>${FALSE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.505061" elapsed="0.001849"/>
+</kw>
+<status status="PASS" start="2026-02-03T10:17:35.497943" elapsed="0.010376"/>
+</test>
+<test id="s1-t4" name="Login Test 4" line="28">
+<kw name="Validate Login">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2026-02-03T10:17:35.512024" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${TRUE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.511743" elapsed="0.000370"/>
+</kw>
+<arg>'${username}' == 'admin' and '${password}' == 'admin123'</arg>
+<arg>Return From Keyword</arg>
+<arg>${TRUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.511012" elapsed="0.001185"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<arg>${FALSE}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="NOT RUN" start="2026-02-03T10:17:35.512363" elapsed="0.000030"/>
+</kw>
+<msg time="2026-02-03T10:17:35.512602" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>admin</arg>
+<arg>admin123</arg>
+<status status="PASS" start="2026-02-03T10:17:35.510401" elapsed="0.002254"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>${TRUE}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-03T10:17:35.513496" elapsed="0.000626"/>
+</kw>
+<status status="PASS" start="2026-02-03T10:17:35.509331" elapsed="0.005330"/>
+</test>
+<status status="PASS" start="2026-02-03T10:17:35.409059" elapsed="0.106962"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Assignment1302" id="s1" pass="4" fail="0" skip="0">Assignment1302</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

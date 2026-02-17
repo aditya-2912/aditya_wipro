@@ -1,0 +1,14 @@
+[
+    {
+        "uid": "123",
+        "name": "aditya",
+        "dept": "cs",
+        "sem": 6,
+        "_marks": [
+            50
+        ],
+        "marks": [
+            50
+        ]
+    }
+]

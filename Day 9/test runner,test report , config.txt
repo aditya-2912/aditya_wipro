@@ -1,0 +1,13 @@
+4. Explain the role of:
+
+Test runner
+
+Test reports
+
+Configuration files
+
+Ans- Test config -> Test Runner -> Test reports 
+
+Test config = how the test will run( to set up the settings)
+Test runner = like parameterized, fixtures 
+Test reports= what happened after running test , there can be different type of test reports console output , html report , 	xml/json 
